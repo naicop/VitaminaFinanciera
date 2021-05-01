@@ -1,0 +1,349 @@
+$colorPrincipal: #006644;
+$colorSecundario:#1B2D4B;
+$nombresPersonas: 25px;
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+footer{
+    background-color: lightgray;
+}
+section{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1{
+    color:$colorPrincipal;
+    font-style:normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+}
+h2{
+    color: #1B2D4B; 
+    text-align: center;  
+}
+
+th{
+    font-size: 20px;
+    color:$colorPrincipal;
+}
+p{
+    color:#3a3a3a;
+}
+.listaFooter{
+    display: inline-block;
+   
+     &__item {
+    list-style-type: none;
+    display: inline-block;
+    }
+}
+ul {
+    
+    li{
+    color:$colorSecundario;
+    }
+}
+ol {
+    color:$colorSecundario;  
+    list-style-type: upper-roman;
+}
+
+.logoInicio{
+    text-decoration: none;
+    color:$colorPrincipal;
+   }
+.encabezado{
+
+&__logoMenu{
+    text-decoration: none;
+    color:$colorPrincipal;
+    font-style:normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+}
+.botonPrincipal{
+
+    &__item{
+
+    background-color:$colorPrincipal;
+    color:white;
+    border:solid;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+    }
+}
+
+/* .botonPrincipal:hover{
+    background-image: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(27,45,75,1) 24%, rgba(2,14,41,1) 50%, rgba(0,102,68,1) 100%); ;
+}*/
+
+.h1Menu{
+    font-size: 18px;
+    font-weight: bold;
+    margin:12px;
+}
+
+.parrafoInicial{
+    font-size: 20px;
+    text-align: center;
+    margin:auto;
+}
+
+.divMitad{
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    }
+
+.divTercio{
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin:15px;
+    }
+.tituloInline{
+    display:inline-block;
+}
+
+.footer{
+
+
+&__div{
+    text-align: right;
+    margin-right:25px;
+}
+}
+.logo{
+    width: 32px;
+    height: 32px;
+}
+
+nav {
+    
+    ul {
+    list-style: none;
+    background-color:$colorSecundario;
+      
+        }
+ 
+    li {
+    
+    a{
+    color:white;
+    text-decoration: none;
+      }
+    }
+}
+.menuPrincipal{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    text-align: center;
+    height: 120px;
+    padding: 1px;  
+    align-items: center;    
+    grid-row-gap: 1px;
+
+    &__item--activo{
+
+        font-weight: bolder;
+       }
+
+
+    }
+
+#divMitad{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "imagen"
+        "parrafo";
+    text-align: center;
+    }
+
+.imagenUno{
+        grid-area: imagen;
+        margin:auto;
+          }
+
+#divTercio{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 33% 33% 33%;
+      text-align: center;
+      grid-row-gap: 20px;
+}
+
+.sectionInicio{
+    margin-top: 100px;
+}
+.imagenInicio{
+    width: 64px;
+    height: auto;
+
+}
+
+
+
+
+.imagen404{
+    width: 100%;
+    height: auto;
+
+
+}
+/*.imagenInicio:hover {
+    transform: scale(1.5,1.5);
+
+}*/
+ 
+.formularioContacto{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.encabezadoTabla{
+
+    margin:0px;
+    align-items: center;
+    text-align: center;
+
+    &__item{
+        color:$colorSecundario;
+    }
+
+}
+
+.columnaListaOrdenada{
+    padding: 20px;
+
+&__lista{
+
+    margin:0px;
+    align-items: center;
+    text-align: center;
+
+}
+
+}
+
+.columnaLista{
+    padding: 20px;
+    
+&__lista{
+    list-style-type: none;
+
+    margin:0px;
+    align-items: center;
+    text-align: center;
+    li{
+        color:$colorPrincipal;
+    }
+}
+
+}
+
+.nombresPersonas{
+    padding: 10px;
+    line-height: 1.8rem;
+    font-size: $nombresPersonas*1.1;
+
+}
+
+.nombresPersonas--nueva {
+    @extend .nombresPersonas;
+    color:$colorSecundario;
+}
+
+
+.darken{
+
+    color:darken($colorSecundario, 50%)
+
+}
+
+@mixin imageSizes($width, $height) {
+    height: $height;
+    width: $width;
+ }
+ 
+ .imagenPersonas {
+    @include imageSizes(40%, auto);
+ }
+ 
+
+@media only screen and (min-width: 480px){
+    .menuPrincipal{
+       grid-template-columns: 25% 25% 25% 25%;
+       grid-template-rows: 100%;
+       height: 60px;
+       text-align: center;
+       padding: 0px;  
+       
+       &__item--activo{
+
+        font-weight: bolder;
+       }
+
+       }
+
+       #divMitad{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+            "parrafo imagen";
+        text-align: center;
+        }
+    
+        .imagenUno{
+            grid-area: imagen;
+        }
+        .sectionInicio{
+            margin-top: 0px;
+        }
+        .logoInicio{
+            font-size: 40px;
+        }
+        .logo{
+            width: 64px;
+            height: 64px;
+        }
+       }
+
+@media only screen and (min-width: 1024px){
+    #divTercio{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 100%;
+        text-align: center;
+}
+}
+
+/*@media only screen and (max-width: 480px){
+    #tablaEliminacion3{
+        display: none;
+        }
+
+      }*/
