@@ -2,7 +2,8 @@ body {
   font-family: 'Poppins', sans-serif; }
 
 footer {
-  background-color: lightgray; }
+  background-color: #1B2D4B;
+  padding-top: 15px; }
 
 section {
   margin-left: 20px;
@@ -30,7 +31,8 @@ p {
   display: inline-block; }
   .listaFooter__item {
     list-style-type: none;
-    display: inline-block; }
+    display: inline-block;
+    padding: 10px; }
 
 ul li {
   color: #1B2D4B; }
